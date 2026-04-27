@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker Charts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="charts">
+  <div class="shell">
+    <header class="hero compact">
+      <div>
+        <p class="eyebrow">Visual Summary</p>
+        <h1>Charts based on the current filtered dataset.</h1>
+        <p class="hero-copy">If you change filters in the main screen and reopen this page, the visuals recalculate from that visible subset.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="ghost-button anchor-button" href="./index.html">Back to Tracker</a>
+      </div>
+    </header>
+
+    <main class="dashboard charts-layout">
+      <section class="panel chart-panel">
+        <div class="chart-head">
+          <h2>Spend by Category</h2>
+          <span id="chartSummary">0 rows loaded</span>
+        </div>
+        <div id="categoryBars" class="bar-chart"></div>
+      </section>
+
+      <section class="panel split-panel">
+        <div>
+          <div class="chart-head">
+            <h2>Debit vs Credit</h2>
+          </div>
+          <div id="typeDonut" class="donut-chart">
+            <div class="donut-hole">
+              <strong id="donutCenter">Rs. 0</strong>
+              <span>Visible total</span>
+            </div>
+          </div>
+        </div>
+        <div id="chartLegend" class="chart-legend"></div>
+      </section>
+
+      <section class="panel chart-panel">
+        <div class="chart-head">
+          <h2>Daily Flow</h2>
+        </div>
+        <div id="dailyBars" class="bar-chart small"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="charts.js"></script>
+</body>
+</html>
